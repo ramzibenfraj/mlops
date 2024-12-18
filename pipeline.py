@@ -57,8 +57,8 @@ def train_with_mlflow():
         mlflow.log_params(model_params)
         mlflow.log_metric("accuracy", accuracy)
         mlflow.log_metric("roc", roc_auc_score)
-
-        # Log the model
+   
+        # Log the model 
         try:
             mlflow.sklearn.log_model(trainer.pipeline, "model")
         except PermissionError as e:
