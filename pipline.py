@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(mess
 
 def train_with_mlflow():
     # Set MLflow tracking directory
-    tracking_uri = './mlruns'  # Save runs locally in the repository
+    tracking_uri = './mlruns'  # Use a local directory that the GitHub runner can access
     os.makedirs(tracking_uri, exist_ok=True)  # Ensure the directory exists
     os.environ['MLFLOW_TRACKING_URI'] = tracking_uri
     mlflow.set_experiment("Model Training Experiment")
@@ -50,7 +50,7 @@ def train_with_mlflow():
         logging.info("Model evaluation completed successfully")
 
         # Tags
-        mlflow.set_tag('Model developer', 'prsdm')
+        mlflow.set_tag('Model developer', 'ramzi')
         mlflow.set_tag('preprocessing', 'OneHotEncoder, Standard Scaler, and MinMax Scaler')
 
         # Log metrics and parameters
