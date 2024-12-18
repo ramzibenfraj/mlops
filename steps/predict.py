@@ -25,4 +25,5 @@ class Predictor:
         y_pred = self.pipeline.predict(X_test)
         accuracy = accuracy_score(y_test, y_pred)
         class_report = classification_report(y_test, y_pred)
+        roc_auc = roc_auc_score(y_test, y_pred)
         return accuracy, class_report, roc_auc
