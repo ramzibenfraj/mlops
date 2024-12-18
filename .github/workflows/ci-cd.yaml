@@ -34,6 +34,10 @@ jobs:
         mkdir -p ./mlruns
         chmod -R 777 ./mlruns
 
+    - name: Set permissions for /workspaces
+      run: |
+        sudo chmod -R 777 /workspaces
+
     - name: Run ML pipeline
       run: python pipeline.py
 

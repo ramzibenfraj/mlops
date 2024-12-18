@@ -59,7 +59,11 @@ def train_with_mlflow():
         mlflow.log_metric("roc", roc_auc_score)
 
         # Log the model
-        mlflow.sklearn.log_model(trainer.pipeline, "model")
+        try:
+            mlflow.sklearn.log_model(trainer.pipeline, "model")
+        except PermissionError as e:
+            logging.error(f"PermissionError: {e}")
+            raise
 
         # Register the model
         model_name = "insurance_model"
