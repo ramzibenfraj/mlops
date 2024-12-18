@@ -38,7 +38,7 @@ def train_with_mlflow():
         trainer.save_model()
         logging.info("Model training completed successfully")
         
-        # Evaluate model
+        # Evaluate model 
         predictor = Predictor()
         X_test, y_test = predictor.feature_target_separator(test_data)
         accuracy, class_report, roc_auc_score = predictor.evaluate_model(X_test, y_test)

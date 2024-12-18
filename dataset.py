@@ -7,7 +7,7 @@ def extract_data():
     if not os.path.exists("data"):
         os.mkdir("data")
     
-    append_mode = os.path.isfile("data/train.csv")
+    append_mode = os.path.isfile("data/train.csv")  
 
     num_datasets = 10 if not append_mode else 1
 

@@ -14,7 +14,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Extract form data
+
         data = {
             'Gender': request.form['Gender'],
             'Age': int(request.form['Age']),
