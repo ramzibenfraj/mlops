@@ -1,0 +1,6 @@
+artifact_location: file:///workspaces/creditCardFraudDetection/mlops-project/mlruns/167222986833414217
+creation_time: 1734454746521
+experiment_id: '167222986833414217'
+last_update_time: 1734454746521
+lifecycle_stage: active
+name: Model Training Experiment

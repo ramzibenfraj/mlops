@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1>Insurance Prediction Form</h1>
+    </header>
+
+    <div class="container mt-5">
+        <form method="POST" action="/predict" class="bg-white p-5 rounded shadow">
+            <label for="Gender" class="form-label">Gender:</label>
+            <select id="Gender" name="Gender" class="form-select mb-3" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="Age" class="form-label">Age:</label>
+            <input type="number" id="Age" name="Age" class="form-control mb-3" required>
+
+            <label for="HasDrivingLicense" class="form-label">Has Driving License:</label>
+            <input type="number" id="HasDrivingLicense" name="HasDrivingLicense" class="form-control mb-3" required>
+
+            <label for="RegionID" class="form-label">Region ID:</label>
+            <input type="number" id="RegionID" name="RegionID" class="form-control mb-3" step="any" required>
+
+            <label for="Switch" class="form-label">Switch:</label>
+            <input type="number" id="Switch" name="Switch" class="form-control mb-3" required>
+
+            <label for="PastAccident" class="form-label">Past Accident:</label>
+            <select id="PastAccident" name="PastAccident" class="form-select mb-3" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="AnnualPremium" class="form-label">Annual Premium:</label>
+            <input type="number" id="AnnualPremium" name="AnnualPremium" class="form-control mb-3" step="any" required>
+
+            <button type="submit" class="btn btn-primary w-100">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+            <div class="mt-5 p-4 bg-light rounded shadow">
+                {% if prediction == 0 %}
+                    <h2 class="text-danger">Prediction Result: {{ prediction }} - Customer is unlikely to purchase additional insurance products.</h2>
+                {% else %}
+                    <h2 class="text-success">Prediction Result: {{ prediction }}</h2>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+    <footer class="bg-blue-600 text-white p-4 text-center mt-5">
+        <p>&copy; 2023 Insurance Prediction. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

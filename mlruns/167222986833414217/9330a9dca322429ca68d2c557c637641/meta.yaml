@@ -1,0 +1,16 @@
+artifact_uri: file:///workspaces/creditCardFraudDetection/mlops-project/mlruns/167222986833414217/9330a9dca322429ca68d2c557c637641/artifacts
+deleted_time: 1734510684883
+end_time: 1734454802541
+entry_point_name: ''
+experiment_id: '167222986833414217'
+lifecycle_stage: deleted
+run_id: 9330a9dca322429ca68d2c557c637641
+run_name: defiant-shrike-427
+run_uuid: 9330a9dca322429ca68d2c557c637641
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734454747506
+status: 3
+tags: []
+user_id: codespace
