@@ -36,7 +36,9 @@ jobs:
 
     - name: Set permissions for /workspaces
       run: |
-        sudo chmod -R 777 /workspaces
+        if [ -d "/workspaces" ]; then
+          sudo chmod -R 777 /workspaces
+        fi
 
     - name: Run ML pipeline
       run: python pipeline.py
