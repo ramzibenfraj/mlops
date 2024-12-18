@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/creditCardFraudDetection/mlops-project/mlruns/167222986833414217/7ab448eefe904d7daaa9f36088bb4e7f/artifacts
+end_time: 1734542037325
+entry_point_name: ''
+experiment_id: '167222986833414217'
+lifecycle_stage: active
+run_id: 7ab448eefe904d7daaa9f36088bb4e7f
+run_name: treasured-trout-628
+run_uuid: 7ab448eefe904d7daaa9f36088bb4e7f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734541984794
+status: 3
+tags: []
+user_id: codespace

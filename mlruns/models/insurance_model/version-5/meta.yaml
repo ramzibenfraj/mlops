@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1734542037320
+current_stage: None
+description: null
+last_updated_timestamp: 1734542037320
+name: insurance_model
+run_id: 7ab448eefe904d7daaa9f36088bb4e7f
+run_link: null
+source: file:///workspaces/creditCardFraudDetection/mlops-project/mlruns/167222986833414217/7ab448eefe904d7daaa9f36088bb4e7f/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///workspaces/creditCardFraudDetection/mlops-project/mlruns/167222986833414217/7ab448eefe904d7daaa9f36088bb4e7f/artifacts/model
+user_id: null
+version: 5
