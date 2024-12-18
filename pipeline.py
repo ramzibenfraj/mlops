@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(mess
 
 def train_with_mlflow():
     # Set MLflow tracking directory to a local folder (mlruns)
-    tracking_uri = './mlruns'  # Use a local directory that GitHub runner can access
+    tracking_uri = os.path.join(os.getcwd(), 'mlruns')  # Use a local directory within the current workspace
     os.makedirs(tracking_uri, exist_ok=True)  # Ensure the directory exists
     os.environ['MLFLOW_TRACKING_URI'] = tracking_uri
     mlflow.set_experiment("Model Training Experiment")
@@ -65,10 +65,10 @@ def train_with_mlflow():
             logging.error(f"PermissionError: {e}")
             raise
 
-        # Register the model
-        model_name = "insurance_model"
-        model_uri = f"runs:/{run.info.run_id}/model"
-        mlflow.register_model(model_uri, model_name)
+        # Remove the model registration to avoid PermissionError
+        # model_name = "insurance_model"
+        # model_uri = f"runs:/{run.info.run_id}/model"
+        # mlflow.register_model(model_uri, model_name)
 
         logging.info("MLflow tracking completed successfully")
 
