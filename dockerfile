@@ -9,7 +9,7 @@ WORKDIR /app
 COPY app.py .
 COPY models/ ./models/
 COPY templates/ ./templates/
-COPY requirements.txt .
+COPY requirement.txt .
 
 
 # Install any needed dependencies
