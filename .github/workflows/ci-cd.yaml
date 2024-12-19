@@ -86,7 +86,7 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f deployment.yaml
-        kubectl apply -f service.yml
+        kubectl apply -f service.yaml
 
     # Step 13: Verify deployment
     - name: Verify deployment
