@@ -85,7 +85,7 @@ jobs:
     # Step 12: Deploy to Kubernetes
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f deployement.yaml
+        kubectl apply -f deployment.yaml
         kubectl apply -f service.yml
 
     # Step 13: Verify deployment
