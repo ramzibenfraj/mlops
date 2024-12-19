@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Load the trained model
 model = joblib.load('models/model.pkl')
 
-@app.route('/')
+@app.route('/') 
 def index():
     return render_template('index.html')
 
