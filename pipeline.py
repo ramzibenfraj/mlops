@@ -13,7 +13,7 @@ from sklearn.metrics import classification_report
 logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
 def train_with_mlflow():  
-    # Set MLflow tracking directory to a local folder (mlruns)
+    # Set MLflow tracking directory to a local folder (mlruns) 
     tracking_uri = './mlruns'  # Use a local directory that GitHub runner can access
     os.makedirs(tracking_uri, exist_ok=True)  # Ensure the directory exists
     os.environ['MLFLOW_TRACKING_URI'] = tracking_uri 

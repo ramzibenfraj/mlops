@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insurance-model-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: insurance-model
+  template:
+    metadata:
+      labels:
+        app: insurance-model
+    spec:
+      containers:
+        - name: insurance-model
+          image: rbenfraj46/insurance_model:latest
+          ports:
+            - containerPort: 5000
+  strategy:
+    type: RollingUpdate  
+    rollingUpdate:
+      maxSurge: 1          
+      maxUnavailable: 1  
