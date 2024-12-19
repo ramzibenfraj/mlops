@@ -14,7 +14,7 @@ def index():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     if request.method == 'GET':
-        return redirect(url_for('index'))
+        return redirect(url_for('index')) 
         
     try:
         data = {
