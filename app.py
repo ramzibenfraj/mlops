@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import joblib
 import pandas as pd
 
@@ -11,10 +11,12 @@ model = joblib.load('models/model.pkl')
 def index():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
+    if request.method == 'GET':
+        return redirect(url_for('index'))
+        
     try:
-
         data = {
             'Gender': request.form['Gender'],
             'Age': int(request.form['Age']),
@@ -31,10 +33,18 @@ def predict():
         # Make prediction
         prediction = model.predict(df)[0]
 
-        return render_template('index.html', prediction=prediction)
+        return render_template('result.html', prediction=prediction)
 
     except Exception as e:
-        return f"An error occurred: {str(e)}"
+        return render_template('index.html', error=str(e))
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('index.html'), 404
+
+@app.errorhandler(405)
+def method_not_allowed_error(error):
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
