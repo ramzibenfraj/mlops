@@ -52,7 +52,7 @@ def train_with_mlflow():
         mlflow.set_tag('Model developer', 'mlops-team')
         mlflow.set_tag('preprocessing', 'OneHotEncoder, Standard Scaler, and MinMax Scaler')
 
-        # Log metrics and parameters
+        # Log metrics and parameters 
         model_params = config['model']['params']
         mlflow.log_params(model_params)
         mlflow.log_metric("accuracy", accuracy)
