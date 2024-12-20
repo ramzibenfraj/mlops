@@ -5,7 +5,7 @@ import mlflow
 import mlflow.sklearn
 from steps.ingest import Ingestion
 from steps.clean import Cleaner
-from steps.train import Trainer
+from steps.train import Trainer 
 from steps.predict import Predictor
 from sklearn.metrics import classification_report
 
