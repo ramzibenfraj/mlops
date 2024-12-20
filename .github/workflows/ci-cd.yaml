@@ -87,6 +87,8 @@ jobs:
       run: |
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
+        
+        kubectl set image deployment/insurance-model-deployment insurance-model=rbenfraj46/insurance_model:latest
 
     # Step 13: Verify deployment
     - name: Verify deployment
