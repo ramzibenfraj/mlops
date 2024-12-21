@@ -1,6 +1,6 @@
 id,Gender,Age,HasDrivingLicense,RegionID,Switch,VehicleAge,PastAccident,AnnualPremium,SalesChannelID,DaysSinceCreated,Result
 163611,Female,69.0,1.0,31.0,,1-2 Year,Yes,£131.50 ,154,199,0
-127641,,32.0,1.0,50.0,0.0,1-2 Year,Yes,"£1,623.85 ",156,279,0
+127641,,32.0,1.0,50.0,0.0,1-2 Year,Yes,"£1,623.85 ",156,279,0 
 54847,Female,50.0,1.0,8.0,1.0,1-2 Year,,"£1,675.95 ",26,273,0
 224816,Female,21.0,1.0,41.0,1.0,< 1 Year,No,"£1,302.25 ",160,228,0  
 109867,Male,22.0,1.0,32.0,,< 1 Year,Yes,"£1,030.00 ",152,220,0
