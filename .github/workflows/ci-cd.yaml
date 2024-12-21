@@ -85,11 +85,11 @@ jobs:
     # Step 12: Deploy to Kubernetes
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
-        
         kubectl set image deployment/insurance-model-deployment insurance-model=rbenfraj46/insurance_model:latest
 
+        kubectl apply -f deployment.yaml
+        kubectl apply -f service.yaml
+      
     # Step 13: Verify deployment
     - name: Verify deployment
       run: kubectl get pods && kubectl get services
